@@ -17,6 +17,7 @@ Patch0:	gapcmon-0.8.5-desktop.patch
 URL: http://gapcmon.sourceforge.net/
 BuildRequires: ImageMagick
 BuildRequires: gtk2-devel
+BuildRequires: libGConf2-devel
 Requires: apcupsd
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
