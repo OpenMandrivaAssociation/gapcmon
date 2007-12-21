@@ -19,6 +19,7 @@ BuildRequires: ImageMagick
 BuildRequires: gtk2-devel
 BuildRequires: libGConf2-devel
 Requires: apcupsd
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 gapcmon monitors and displays the status of UPSs under the management 
