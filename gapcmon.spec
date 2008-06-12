@@ -39,13 +39,17 @@ install -m 644 %{buildroot}%{_datadir}/pixmaps/apcupsd.png %{buildroot}%{_iconsd
 convert -scale 16 %{buildroot}%{_datadir}/pixmaps/apcupsd.png %{buildroot}%{_iconsdir}/hicolor/16x16/apps/%{name}.png
 convert -scale 48 %{buildroot}%{_datadir}/pixmaps/apcupsd.png %{buildroot}%{_iconsdir}/hicolor/48x48/apps/%{name}.png
 
+%if %mdkversion < 200900
 %post
 %{update_menus}
 %{update_icon_cache hicolor}
+%endif
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
 %{clean_icon_cache hicolor}
+%endif
 
 %clean
 rm -rf %{buildroot}
