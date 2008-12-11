@@ -11,7 +11,7 @@ Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 # desktop-file-install. AdamW 2007/07
 Patch0:		gapcmon-0.8.5-desktop.patch
 URL:		http://gapcmon.sourceforge.net/
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 BuildRequires:	gtk2-devel
 BuildRequires:	libGConf2-devel
 Requires:	apcupsd
