@@ -10,6 +10,7 @@ Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 # Fixes up the .desktop file - it's too broken to use 
 # desktop-file-install. AdamW 2007/07
 Patch0:		gapcmon-0.8.5-desktop.patch
+Patch1:		gapcmon-0.8.6-fix-str-fmt.patch
 URL:		http://gapcmon.sourceforge.net/
 BuildRequires:	imagemagick
 BuildRequires:	gtk2-devel
@@ -24,6 +25,7 @@ of apcupsd.
 %prep
 %setup -q
 %patch0 -p1 -b .desktop
+%patch1 -p0 -b .str
 
 %build
 %configure2_5x --disable-maintainer-mode
@@ -31,7 +33,7 @@ of apcupsd.
 
 %install
 rm -rf %{buildroot}
-%makeinstall
+%makeinstall_std
 
 # fd.o icons
 mkdir -p %{buildroot}%{_iconsdir}/hicolor/{16x16,32x32,48x48}/apps
