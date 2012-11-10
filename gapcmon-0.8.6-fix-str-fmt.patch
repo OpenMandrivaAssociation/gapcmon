@@ -1,0 +1,11 @@
+--- src/gapcmon.c.str	2010-02-19 16:33:06.000000000 +0100
++++ src/gapcmon.c	2010-02-19 16:33:23.000000000 +0100
+@@ -2875,7 +2875,7 @@
+ 
+    pch = g_strdup_printf("%s(%s) emsg=%s", pch_func, pch_topic, pch_emsg);
+ 
+-   g_message(pch);
++   g_message("%s",pch);
+ 
+    g_free(pch);
+ 
