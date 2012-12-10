@@ -3,7 +3,7 @@
 Summary:	Utility for monitoring the operation of UPSs controlled by apcupsd
 Name:		gapcmon
 Version:	0.8.6
-Release:	%{mkrel 2}
+Release:	3
 License:	GPLv2+
 Group:		Monitoring
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
@@ -16,7 +16,6 @@ BuildRequires:	imagemagick
 BuildRequires:	gtk2-devel
 BuildRequires:	libGConf2-devel
 Requires:	apcupsd
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 gapcmon monitors and displays the status of UPSs under the management 
@@ -28,6 +27,7 @@ of apcupsd.
 %patch1 -p0 -b .str
 
 %build
+export LDFLAGS="-lX11"
 %configure2_5x --disable-maintainer-mode
 %make
 
@@ -63,4 +63,37 @@ rm -rf %{buildroot}
 %{_datadir}/pixmaps/*.png
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
+
+
+
+%changelog
+* Fri Feb 19 2010 Funda Wang <fwang@mandriva.org> 0.8.6-2mdv2010.1
++ Revision: 508341
+- fix str fmt
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - lowercase ImageMagick
+
+* Thu Jun 12 2008 Pixel <pixel@mandriva.com> 0.8.6-1mdv2009.0
++ Revision: 218423
+- rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Sat Mar 01 2008 Adam Williamson <awilliamson@mandriva.org> 0.8.6-1mdv2008.1
++ Revision: 177115
+- spec clean
+- new release 0.8.6
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Thu Jul 05 2007 Adam Williamson <awilliamson@mandriva.org> 0.8.5-1mdv2008.0
++ Revision: 48428
+- buildrequires libGConf2-devel
+- Import gapcmon
 
