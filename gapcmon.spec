@@ -2,11 +2,11 @@
 
 Summary:	Utility for monitoring the operation of UPSs controlled by apcupsd
 Name:		gapcmon
-Version:	0.8.6
-Release:	3
+Version:	0.8.9
+Release:	1
 License:	GPLv2+
 Group:		Monitoring
-Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
+Source0:	https://sourceforge.net/projects/gapcmon/files/gapcmon/0.8.9/%{name}-%{version}.tar.bz2
 # Fixes up the .desktop file - it's too broken to use 
 # desktop-file-install. AdamW 2007/07
 Patch0:		gapcmon-0.8.5-desktop.patch
@@ -96,4 +96,5 @@ rm -rf %{buildroot}
 + Revision: 48428
 - buildrequires libGConf2-devel
 - Import gapcmon
+
 
