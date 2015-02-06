@@ -3,7 +3,7 @@
 Summary:	Utility for monitoring the operation of UPSs controlled by apcupsd
 Name:		gapcmon
 Version:	0.8.9
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Monitoring
 Source0:	https://sourceforge.net/projects/gapcmon/files/gapcmon/0.8.9/%{name}-%{version}.tar.bz2
