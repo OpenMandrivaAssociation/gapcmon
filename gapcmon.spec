@@ -11,7 +11,7 @@ Source0:	https://sourceforge.net/projects/gapcmon/files/gapcmon/0.8.9/%{name}-%{
 # desktop-file-install. AdamW 2007/07
 Patch0:		gapcmon-0.8.5-desktop.patch
 Patch1:		gapcmon-0.8.6-fix-str-fmt.patch
-URL:		http://gapcmon.sourceforge.net/
+URL:		https://gapcmon.sourceforge.net/
 BuildRequires:	imagemagick
 BuildRequires:	gtk2-devel
 BuildRequires:	libGConf2-devel
