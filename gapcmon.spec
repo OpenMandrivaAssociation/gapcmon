@@ -12,6 +12,11 @@ Source0:	https://sourceforge.net/projects/gapcmon/files/gapcmon/0.8.9/%{name}-%{
 Patch0:		gapcmon-0.8.5-desktop.patch
 Patch1:		gapcmon-0.8.6-fix-str-fmt.patch
 URL:		https://gapcmon.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	imagemagick
 BuildRequires:	gtk2-devel
 BuildRequires:	libGConf2-devel
